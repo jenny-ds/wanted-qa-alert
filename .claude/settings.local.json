@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip3 show *)",
+      "Bash(chmod +x /Users/kimjisoo/wanted_qa_alert/run.sh)",
+      "Bash(/opt/homebrew/bin/python3.12 -m pip install requests --quiet)",
+      "Bash(/opt/homebrew/bin/python3.12 -c \"import requests; print\\('requests OK'\\)\")",
+      "Bash(/opt/homebrew/bin/python3.12 -m pip install requests --break-system-packages --quiet)",
+      "Bash(/opt/homebrew/bin/python3.12 -c \"import requests; print\\('OK'\\)\")",
+      "Bash(crontab -l)",
+      "Bash(curl -s 'https://www.wanted.co.kr/api/v4/jobs?query=QA&sort=latest&limit=3&country=kr' -H 'User-Agent: Mozilla/5.0' -H 'Wanted-User-Agent: wanted-web' -H 'Accept: application/json')",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s 'https://www.wanted.co.kr/api/v4/jobs?query=QA&sort=latest&country=kr&locations=seoul&years=3&limit=5' -H 'User-Agent: Mozilla/5.0' -H 'Wanted-User-Agent: wanted-web' -H 'Accept: application/json')",
+      "Bash(curl -s 'https://www.wanted.co.kr/api/v4/jobs?query=QA&country=kr&locations=seoul&years=3&limit=3' -H 'User-Agent: Mozilla/5.0' -H 'Wanted-User-Agent: wanted-web' -H 'Accept: application/json')",
+      "Bash(curl -s 'https://www.wanted.co.kr/api/v4/jobs?query=QA&country=kr&locations=seoul&locations=incheon&locations=gyeonggi&years=3&limit=3' -H 'User-Agent: Mozilla/5.0' -H 'Wanted-User-Agent: wanted-web' -H 'Accept: application/json')",
+      "Bash(git init *)",
+      "Bash(git branch *)"
+    ]
+  }
+}

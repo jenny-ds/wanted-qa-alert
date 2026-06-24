@@ -1,0 +1,38 @@
+name: Wanted QA Alert
+
+on:
+  schedule:
+    - cron: "0 1 * * *"   # 매일 01:00 UTC = 한국시간 10:00 KST
+  workflow_dispatch:        # 수동 실행 버튼
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # 어제 스냅샷을 캐시에서 복원
+      - name: Restore snapshot cache
+        uses: actions/cache@v4
+        with:
+          path: data/
+          key: snapshot-${{ github.run_id }}
+          restore-keys: |
+            snapshot-
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run alert
+        env:
+          SMTP_HOST: smtp.gmail.com
+          SMTP_PORT: 587
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}
+        run: python main.py
