@@ -1,6 +1,6 @@
 """Entry point: fetch → store → compare → notify (Wanted + Remember)."""
 
-from fetcher import fetch_all_jobs as fetch_wanted
+from wanted_fetcher import fetch_all_jobs as fetch_wanted
 from remember_fetcher import fetch_all_jobs as fetch_remember
 from store import save, load_yesterday, load_today
 from compare import compare

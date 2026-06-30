@@ -69,7 +69,7 @@ python main.py
 
 ```
 ├── main.py               # 진입점
-├── fetcher.py            # 원티드 API 공고 수집
+├── wanted_fetcher.py     # 원티드 API 공고 수집
 ├── remember_fetcher.py   # 리멤버 API 공고 수집
 ├── store.py              # 날짜별 스냅샷 저장/로드 (data/{source}_YYYY-MM-DD.json)
 ├── compare.py            # 어제/오늘 공고 비교
