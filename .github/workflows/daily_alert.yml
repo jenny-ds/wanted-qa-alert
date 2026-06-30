@@ -1,4 +1,4 @@
-name: Wanted QA Alert
+name: QA Alert (Wanted + Remember)
 
 on:
   schedule:
