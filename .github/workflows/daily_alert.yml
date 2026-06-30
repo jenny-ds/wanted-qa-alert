@@ -1,8 +1,8 @@
-name: QA Alert (Wanted + Remember)
+name: Wanted QA Alert
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # 매일 00:00 UTC = 한국시간 09:00 KST (딜레이 감안해 오전 10시 목표)
+    - cron: "0 0 * * *"   # 매일 00:00 UTC = 한국시간 09:00 KST
   workflow_dispatch:        # 수동 실행 버튼
 
 jobs:
@@ -12,7 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 어제 스냅샷을 캐시에서 복원
       - name: Restore snapshot cache
         uses: actions/cache@v4
         with:
