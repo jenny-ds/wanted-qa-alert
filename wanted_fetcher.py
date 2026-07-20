@@ -9,10 +9,12 @@ import requests
 import time
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*",
-    "Referer": "https://www.wanted.co.kr/",
+    "Accept-Language": "ko-KR,ko;q=0.9",
+    "Referer": "https://www.wanted.co.kr/jobs?query=QA",
     "Wanted-User-Agent": "wanted-web",
+    "X-Wanted-Language": "ko",
 }
 
 BASE_PARAMS = {
